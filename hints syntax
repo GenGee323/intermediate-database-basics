@@ -1,0 +1,39 @@
+SELECT [Column names] 
+FROM [table] [abbv]
+JOIN [table2] [abbv2] ON abbv.prop = abbv2.prop WHERE [Conditions];
+
+SELECT a.name, b.name FROM some_table a JOIN another_table b ON a.some_id = b.some_id;
+SELECT a.name, b.name FROM some_table a JOIN another_table b ON a.some_id = b.some_id WHERE b.email = 'e@mail.com';
+
+
+
+//practice nested queries 
+
+SELECT [column names] 
+FROM [table] 
+WHERE column_id IN ( SELECT column_id FROM [table2] WHERE [Condition] );
+
+SELECT name, Email FROM Athlete WHERE AthleteId IN ( SELECT PersonId FROM PieEaters WHERE Flavor='Apple' );
+
+//Practice updating Rows
+
+UPDATE [table] 
+SET [column1] = [value1], [column2] = [value2] 
+WHERE [Condition];
+
+UPDATE athletes SET sport = 'Picklball' WHERE sport = 'pockleball';
+
+//Group by
+
+SELECT [column1], [column2]
+FROM [table] [abbr]
+GROUP BY [column];
+
+//Use Distinct
+
+SELECT DISTINCT [column]
+FROM [table];
+
+//Delete Rows
+
+DELETE FROM [table] WHERE [condition]
